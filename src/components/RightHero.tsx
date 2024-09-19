@@ -128,7 +128,7 @@ export default function RightHero() {
       <div className="flex flex-col translate-y-16">
         <div className={`${sora.className} text-3xl sm:text-4xl lg:text-5xl`}>
           <h1 className="font-black">
-            Hey, I'm <br />
+            Hey, I&apos;m <br />
             <span>
               <Typewriter
                 words={[
