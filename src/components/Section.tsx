@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Encode_Sans_Expanded } from '@next/font/google'
-import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { TracingBeam } from '../components/ui/tracing-beam'
 import { CardSpotlight } from './ui/card-spotlight'
