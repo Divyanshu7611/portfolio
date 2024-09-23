@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import { TracingBeamDemo } from '@/components/Section'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Hero />
+        <TracingBeamDemo />
       </main>
     </div>
   )
