@@ -7,6 +7,7 @@ import { CardSpotlight } from './ui/card-spotlight'
 import { CardSpotlightDemo } from './CardSpotlightDemo'
 import { CardDemo } from './CardDemo'
 import { SignupFormDemo } from './SignupFormDemo'
+import { GlareCardDemo } from './GlareCardDemo'
 
 const encoded = Encode_Sans_Expanded({
   weight: '700',
@@ -22,10 +23,11 @@ export function TracingBeamDemo() {
             <p className={twMerge(encoded.className, 'text-xl mb-4')}>
               {item.title}
             </p>
+            <GlareCardDemo />
 
-            <div className="text-sm  prose prose-sm dark:prose-invert">
+            {/* <div className="text-sm  prose prose-sm dark:prose-invert">
               {item.description}
-            </div>
+            </div> */}
           </div>
         ))}
 

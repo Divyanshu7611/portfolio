@@ -31,6 +31,7 @@ const config: Config = {
         'expand-contract': 'expand-contract 5s ease-in-out infinite',
         'expand-contract-slow': 'expand-contract 8s ease-in-out infinite',
         move: 'move 5s linear infinite',
+        'meteor-effect': 'meteor 5s linear infinite',
       },
       keyframes: {
         'expand-contract': {
