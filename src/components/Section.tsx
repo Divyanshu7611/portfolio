@@ -31,7 +31,7 @@ export function TracingBeamDemo() {
         ))}
 
         {/* projecs section */}
-        <h1 className={twMerge(encoded.className, 'text-xl mb-4')}>PROJECTS</h1>
+        {/* <h1 className={twMerge(encoded.className, 'text-xl mb-4')}>PROJECTS</h1>
         <div className="flex gap-10 lg:flex-row flex-col mt-10">
           <CardSpotlightDemo />
           <CardSpotlightDemo />
@@ -39,7 +39,7 @@ export function TracingBeamDemo() {
         <div className="flex gap-10 lg:flex-row flex-col mt-10">
           <CardSpotlightDemo />
           <CardSpotlightDemo />
-        </div>
+        </div> */}
 
         <h1 className={twMerge(encoded.className, 'text-xl mb-4 mt-10')}>
           SKILLS
