@@ -311,21 +311,13 @@
 
 
 
-
 'use client'
 import { cn } from '@/lib/utils'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import React, { useMemo, useRef } from 'react'
 import * as THREE from 'three'
 
-export const CanvasRevealEffect = ({
-  animationSpeed = 0.4,
-  opacities = [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1],
-  colors = [[0, 255, 255]],
-  containerClassName,
-  dotSize,
-  showGradient = true,
-}: {
+type CanvasRevealEffectProps = {
   /**
    * 0.1 - slower
    * 1.0 - faster
@@ -336,6 +328,15 @@ export const CanvasRevealEffect = ({
   containerClassName?: string
   dotSize?: number
   showGradient?: boolean
+}
+
+export const CanvasRevealEffect: React.FC<CanvasRevealEffectProps> = ({
+  animationSpeed = 0.4,
+  opacities = [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1],
+  colors = [[0, 255, 255]],
+  containerClassName,
+  dotSize,
+  showGradient = true,
 }) => {
   return (
     <div className={cn('h-full relative bg-white w-full', containerClassName)}>
@@ -379,7 +380,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   shader = '',
   center = ['x', 'y'],
 }) => {
-  const uniforms = React.useMemo(() => {
+  const uniforms = useMemo(() => {
     let colorsArray = [
       colors[0],
       colors[0],
@@ -489,9 +490,11 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   )
 }
 
+type UniformValue = number | number[] | number[][]
+
 type Uniforms = {
   [key: string]: {
-    value: number[] | number[][] | number
+    value: UniformValue
     type: string
   }
 }
@@ -500,19 +503,31 @@ type ShaderMaterialMesh = THREE.Mesh & {
   material: THREE.ShaderMaterial & {
     uniforms: {
       u_time: { value: number }
-      [key: string]: { value: any }  // We keep this any since uniform values can be of various types
+      [key: string]: { value: UniformValue | THREE.Vector2 | THREE.Vector3 | THREE.Vector3[] }
     }
   }
 }
-const ShaderMaterial = ({
-  source,
-  uniforms,
-  maxFps = 60,
-}: {
+
+type PreparedUniform = {
+  value: number | number[] | THREE.Vector2 | THREE.Vector3 | THREE.Vector3[]
+  type: string
+}
+
+type PreparedUniforms = {
+  [key: string]: PreparedUniform
+}
+
+interface ShaderMaterialProps {
   source: string
   hovered?: boolean
   maxFps?: number
   uniforms: Uniforms
+}
+
+const ShaderMaterial: React.FC<ShaderMaterialProps> = ({
+  source,
+  uniforms,
+  maxFps = 60,
 }) => {
   const { size } = useThree()
   const ref = useRef<ShaderMaterialMesh>(null)
@@ -530,15 +545,6 @@ const ShaderMaterial = ({
     const timeLocation = material.uniforms.u_time
     timeLocation.value = timestamp
   })
-
-  type PreparedUniform = {
-    value: number | number[] | THREE.Vector2 | THREE.Vector3 | THREE.Vector3[]
-    type: string
-  }
-
-  type PreparedUniforms = {
-    [key: string]: PreparedUniform
-  }
 
   const getUniforms = () => {
     const preparedUniforms: PreparedUniforms = {}
@@ -562,7 +568,7 @@ const ShaderMaterial = ({
         case 'uniform3fv':
           preparedUniforms[uniformName] = {
             value: (uniform.value as number[][]).map((v) =>
-              new THREE.Vector3().fromArray(v),
+              new THREE.Vector3().fromArray(v)
             ),
             type: '3fv',
           }
@@ -587,7 +593,6 @@ const ShaderMaterial = ({
     return preparedUniforms
   }
 
-  // Shader material
   const material = useMemo(() => {
     const materialObject = new THREE.ShaderMaterial({
       vertexShader: `
@@ -622,20 +627,16 @@ const ShaderMaterial = ({
   )
 }
 
+interface ShaderProps {
+  source: string
+  uniforms: Uniforms
+  maxFps?: number
+}
+
 const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
   return (
-    <Canvas className="absolute inset-0  h-full w-full">
+    <Canvas className="absolute inset-0 h-full w-full">
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
     </Canvas>
   )
-}
-interface ShaderProps {
-  source: string
-  uniforms: {
-    [key: string]: {
-      value: number[] | number[][] | number
-      type: string
-    }
-  }
-  maxFps?: number
 }

@@ -60,8 +60,16 @@ const Skeleton = () => {
     ],
   ]
 
+  // useEffect(() => {
+  //   // @ts-expect-error
+  //   animate(sequence, {
+  //     repeat: Infinity,
+  //     repeatDelay: 1,
+  //   })
+  // }, [])
+
   useEffect(() => {
-    // @ts-expect-error
+    // @ts-expect-error - Framer Motion's type definitions don't fully support the sequence array structure for complex animations
     animate(sequence, {
       repeat: Infinity,
       repeatDelay: 1,
