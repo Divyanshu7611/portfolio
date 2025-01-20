@@ -55,10 +55,10 @@ import Image from 'next/image'
 export default function LeftHero() {
   return (
     <div>
-      <div className="relative h-72 w-72 lg:h-96 lg:w-96 mx-auto">
+      <div className="relative md:h-80 md:w-80 h-72 w-72 lg:h-96 lg:w-96 mx-auto">
         {/* External gradient with animation */}
         <div
-          className="absolute inset-0 rounded-full opacity-30 animate-expand-contract"
+          className="absolute inset-0 rounded-full opacity-40 animate-expand-contract"
           style={{
             background: 'radial-gradient(circle, #161499 9%, #FFFFFF 80%)',
             mixBlendMode: 'soft-light',
@@ -67,7 +67,7 @@ export default function LeftHero() {
 
         {/* Middle layer with slower animation */}
         <div
-          className="absolute inset-0 rounded-full opacity-40 m-5 animate-expand-contract-slow"
+          className="absolute inset-0 rounded-full opacity-60 m-5 animate-expand-contract-slow"
           style={{
             background: 'radial-gradient(circle, #161499 9%, #FFFFFF 80%)',
             mixBlendMode: 'soft-light',
@@ -75,14 +75,14 @@ export default function LeftHero() {
         ></div>
 
         {/* Image layer */}
-        <div className="absolute inset-0 rounded-full opacity-60 m-10 bg-white z-40">
+        <div className="absolute inset-0 rounded-full opacity-100 m-10 bg-white z-40">
           <Image
-            className="absolute inset-0 rounded-full m-5 z-50 -translate-y-16 -translate-x-5"
+            className="absolute inset-0 rounded-full m-5 z-50 -translate-y-9 -translate-x-5"
             alt="Hero"
             quality={100}
-            src="/pic.png"
-            width={350}
-            height={350}
+            src="/img.jpg"
+            width={400}
+            height={400}
           />
         </div>
 

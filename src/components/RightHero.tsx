@@ -118,7 +118,7 @@ export default function RightHero() {
   return (
     <div className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start text-center lg:text-left px-6 lg:px-0">
       <div
-        className="absolute inset-0 rounded-full opacity-50 w-[70%] sm:w-[80%] lg:w-[45%] h-[40%] sm:h-[40%] top-[15%] lg:top-[20%] left-10 lg:left-0 sm:left-20"
+        className="absolute inset-0 rounded-full opacity-50 w-[90%] sm:w-[80%] lg:w-[45%] h-[60%] sm:h-[40%] top-[15%] lg:top-[20%] left-10 lg:left-0 sm:left-20"
         style={{
           background: 'radial-gradient(circle, #161499 9%, #FFFFFF 80%)',
           mixBlendMode: 'color',
@@ -150,16 +150,20 @@ export default function RightHero() {
         <p
           className={`${encoded.className} max-w-xs sm:max-w-sm lg:max-w-md font-normal text-xs sm:text-sm mt-6`}
         >
-          Hello Guys, I am a Full Stack Web Developer. I have 20+ years of
-          experience. This is my portfolio.
+        Hi! I'm a Full Stack Web Developer passionate about creating user-friendly and scalable web applications
         </p>
 
         <div className="flex sm:flex-row gap-5 mt-7 mx-auto lg:mx-0">
           <button className="btn">Hire Me</button>
 
+                <a href="/my resume.pdf" download className='cursor-pointer' target="_blank">
           <div className="button">
             <div className="button-wrapper">
-              <div className="text">Resume</div>
+              <div className="text cursor-pointer">
+
+                Resume
+                </div>
+              
               <span className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -182,13 +186,18 @@ export default function RightHero() {
               </span>
             </div>
           </div>
+          </a>
         </div>
 
         <div className="flex gap-6 mt-7 text-2xl sm:text-3xl justify-center lg:justify-start">
+          <a href='https://github.com/users/Divyanshu7611'>
+          <ImGithub className="hover:scale-110 cursor-pointer hover:text-blue-600" />
+          </a>
+          <a href='https://www.linkedin.com/in/divyanshu-sharma-7aaa15203'>
+          <BsLinkedin className="hover:scale-110 cursor-pointer hover:text-blue-600" />
+          </a>
           <FaInstagram className="hover:scale-110 cursor-pointer hover:text-blue-600" />
           <BsTwitterX className="hover:scale-110 cursor-pointer hover:text-blue-600" />
-          <ImGithub className="hover:scale-110 cursor-pointer hover:text-blue-600" />
-          <BsLinkedin className="hover:scale-110 cursor-pointer hover:text-blue-600" />
         </div>
       </div>
     </div>
