@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import { TracingBeamDemo } from '@/components/Section'
+
 
 export default function Home() {
   return (
