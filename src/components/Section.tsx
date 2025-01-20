@@ -3,10 +3,7 @@ import React from 'react'
 import { Encode_Sans_Expanded } from '@next/font/google'
 import { twMerge } from 'tailwind-merge'
 import { TracingBeam } from '../components/ui/tracing-beam'
-import { CardSpotlightDemo } from './CardSpotlightDemo'
-import { CardDemo } from './CardDemo'
-import { SignupFormDemo } from './SignupFormDemo'
-import { GlareCardDemo } from './GlareCardDemo'
+
 
 const encoded = Encode_Sans_Expanded({
   weight: '700',
@@ -22,7 +19,7 @@ export function TracingBeamDemo() {
             <p className={twMerge(encoded.className, 'text-xl mb-4')}>
               {item.title}
             </p>
-            <GlareCardDemo />
+         
 
             {/* <div className="text-sm  prose prose-sm dark:prose-invert">
               {item.description}
@@ -30,22 +27,9 @@ export function TracingBeamDemo() {
           </div>
         ))}
 
-        {/* projecs section */}
-        {/* <h1 className={twMerge(encoded.className, 'text-xl mb-4')}>PROJECTS</h1>
-        <div className="flex gap-10 lg:flex-row flex-col mt-10">
-          <CardSpotlightDemo />
-          <CardSpotlightDemo />
-        </div>
-        <div className="flex gap-10 lg:flex-row flex-col mt-10">
-          <CardSpotlightDemo />
-          <CardSpotlightDemo />
-        </div> */}
+       
 
-        <h1 className={twMerge(encoded.className, 'text-xl mb-4 mt-10')}>
-          SKILLS
-        </h1>
-        <CardDemo />
-        <SignupFormDemo />
+
       </div>
     </TracingBeam>
   )
