@@ -150,7 +150,7 @@ export default function RightHero() {
         <p
           className={`${encoded.className} max-w-xs sm:max-w-sm lg:max-w-md font-normal text-xs sm:text-sm mt-6`}
         >
-        Hi! I'm a Full Stack Web Developer passionate about creating user-friendly and scalable web applications
+        Hi! I&apos;m a Full Stack Web Developer passionate about creating user-friendly and scalable web applications
         </p>
 
         <div className="flex sm:flex-row gap-5 mt-7 mx-auto lg:mx-0">
