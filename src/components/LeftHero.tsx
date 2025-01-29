@@ -60,8 +60,8 @@ export default function LeftHero() {
         <div
           className="absolute inset-0 rounded-full opacity-40 animate-expand-contract"
           style={{
-            background: 'radial-gradient(circle, #161499 9%, #FFFFFF 80%)',
-            mixBlendMode: 'soft-light',
+            background: 'radial-gradient(circle, #161499 9%, #FFFFFF 100%)',
+            mixBlendMode: 'hard-light',
           }}
         ></div>
 
@@ -69,8 +69,8 @@ export default function LeftHero() {
         <div
           className="absolute inset-0 rounded-full opacity-60 m-5 animate-expand-contract-slow"
           style={{
-            background: 'radial-gradient(circle, #161499 9%, #FFFFFF 80%)',
-            mixBlendMode: 'soft-light',
+            background: 'radial-gradient(circle, #161499 9%, #FFFFFF 100%)',
+            mixBlendMode: 'hard-light',
           }}
         ></div>
 
