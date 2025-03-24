@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Boxes } from '@/components/ui/BackgroundBoxes'
 import './globals.css'
+import FloatingNavbar from '@/components/FloatDock'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,7 +30,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-          <Boxes/>
+          {/* <Boxes/> */}
+          {/* <FloatingNavbar/> */}
         {children}
       </body>
     </html>

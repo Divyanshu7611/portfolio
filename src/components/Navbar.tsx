@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className="w-full bg-transparent shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full shadow-md fixed top-0 left-0 z-50 backdrop:bg-black backdrop-blur-lg">
       <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         <div className={`${sora.className} text-xl font-bold text-white`}>
           {!isMenuOpen && <h1>PortFolio</h1>}
