@@ -38,8 +38,7 @@ export default function RightHero() {
                 words={[
                   'Divyanshu Sharma',
                   'a Full Stack Developer',
-                  'a Freelancer',
-                  'a UI/UX Designer',
+                  'a Freelancer'
                 ]}
                 loop
                 cursor
@@ -57,7 +56,7 @@ export default function RightHero() {
         Hi! I&apos;m a Full Stack Web Developer passionate about creating user-friendly and scalable web applications
         </p>
 
-        <div className="flex sm:flex-row gap-5 mt-7 mx-auto lg:mx-0">
+        <div className="flex sm:flex-row gap-5 mt-10 md:mt-7 mx-auto lg:mx-0">
           <button className="btn">Hire Me</button>
 
                 <a href="/my resume.pdf" download className='cursor-pointer' target="_blank">
@@ -93,7 +92,7 @@ export default function RightHero() {
           </a>
         </div>
 
-        <div className="flex gap-6 mt-7 text-2xl sm:text-3xl justify-center lg:justify-start">
+        <div className="flex gap-6 mt-16 md:mt-7 text-2xl sm:text-3xl justify-center lg:justify-start">
           <a href='https://github.com/users/Divyanshu7611'>
           <ImGithub className="hover:scale-110 cursor-pointer hover:text-blue-600" />
           </a>

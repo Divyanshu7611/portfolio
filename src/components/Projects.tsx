@@ -13,7 +13,7 @@ export default function Portfolio() {
         title="Vrental"
         description="A comprehensive Apartment rental platform built with Next.js and typescript. Features real-time availability, dynamic pricing, and a seamless booking experience."
         imageUrl="/vrental.png"
-        projectUrl="www.vrental.in"
+        projectUrl="https://www.vrental.in"
       />
       <ProjectCard
         title="Whatsapp Clone"
@@ -25,7 +25,7 @@ export default function Portfolio() {
         title="E-Commerce App"
         description="A high-performance e-commerce platform with Next.js, Bigcommerce and a dynamic product catalog. Optimized for fast checkout and a smooth shopping experience."
         imageUrl="/ecommerce.png"
-        projectUrl="www.timesofmobile.com"
+        projectUrl="https://www.timesofmobile.com"
       />
       <ProjectCard
         title="Qr-Based Attendence System"

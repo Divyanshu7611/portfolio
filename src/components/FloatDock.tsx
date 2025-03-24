@@ -6,7 +6,7 @@ import { RiContactsLine } from "react-icons/ri";
 
 const FloatDock = ({ setActiveSection }: { setActiveSection: (section: string) => void }) => {
   return (
-    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white rounded-full shadow-lg p-3 px-6 flex gap-6">
+    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white rounded-full border-2 border-gray-300 shadow-lg p-3 px-6 flex gap-6">
       <button onClick={() => setActiveSection("hero")} className="hover:text-gray-400 transition">
         <FaHome size={24} />
       </button>
