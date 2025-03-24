@@ -1,7 +1,6 @@
 import React from 'react'
 import LeftHero from './LeftHero'
 import RightHero from './RightHero'
-import { Boxes } from './ui/BackgroundBoxes'
 
 export default function Hero() {
   return (

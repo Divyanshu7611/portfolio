@@ -52,7 +52,7 @@ const ContactForm = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Let's work together! Send me a message.
+          Let&apos;s work together! Send me a message.
         </motion.p>
 
         <motion.form

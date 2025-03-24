@@ -1,8 +1,5 @@
 "use client";
-
-import { useState } from "react";
 import { FaHome, FaUser } from "react-icons/fa";
-import { GrProjects } from "react-icons/gr";
 import { FaCode } from "react-icons/fa6";
 import { GoCodespaces } from "react-icons/go";
 import { RiContactsLine } from "react-icons/ri";
