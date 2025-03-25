@@ -95,8 +95,8 @@ const SkillsSection = () => {
   return (
     <section className="py-12">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-white">My Skills</h2>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">Technologies I work with</p>
+        <h2 className="text-3xl font-bold text-green-400">My Skills</h2>
+        <p className="text-gray-400 mt-2">Technologies I work with</p>
 
         <motion.div 
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-8"
