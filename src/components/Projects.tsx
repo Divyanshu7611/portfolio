@@ -4,8 +4,8 @@ export default function Portfolio() {
   return (
     <div className="flex justify-center items-center flex-col">
 
-    <h2 className="text-3xl font-bold text-green-400 text-center mt-5">Projects</h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-20">
+    <h2 className="text-3xl font-bold text-green-400 text-center mt-20">Projects</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 mt-10">
       <ProjectCard
         title="Edtech Platform"
         description=" A modern educational technology platform featuring an engaging UI, seamless animations, and interactive content delivery. Built with React.js for smooth navigation and performance."
