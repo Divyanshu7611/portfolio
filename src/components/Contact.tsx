@@ -38,7 +38,7 @@ const ContactForm = () => {
     <section className="py-12 min-h-screen flex items-center justify-center">
       <div className="max-w-3xl mx-auto px-6">
         <motion.h2
-          className="text-4xl font-bold text-center text-white"
+          className="text-4xl font-bold text-center text-green-400"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
