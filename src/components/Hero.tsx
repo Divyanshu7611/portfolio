@@ -472,10 +472,10 @@ export default function Hero() {
         </svg>
       </div>
 
-      <main className="relative mx-auto grid flex-1 place-items-center py-8 sm:py-12">
+      <main className="relative z-20 mx-auto grid flex-1 place-items-center py-8 sm:py-12">
         <div
           ref={nameSceneRef}
-          className="relative flex flex-col items-center text-center [transform-style:preserve-3d]"
+          className="relative z-30 flex flex-col items-center text-center [transform-style:preserve-3d]"
         >
           <div className="hero-note hero-parallax relative mb-7 h-32 w-32 overflow-hidden rounded-full border-[6px] border-white bg-zinc-100 shadow-[0_25px_70px_rgba(24,24,27,0.16)] sm:h-40 sm:w-40">
             <Image
@@ -539,7 +539,7 @@ export default function Hero() {
           <a
             href="/divyanshu-cv.pdf"
             download
-            className="hero-note group mt-7 inline-flex items-center gap-3 rounded-full border border-white/80 bg-white/55 p-2 pl-5 text-xs font-black uppercase tracking-[0.22em] text-zinc-700 shadow-[0_18px_60px_rgba(24,24,27,0.12)] backdrop-blur-2xl transition hover:-translate-y-1 hover:border-zinc-950 hover:bg-white/80"
+            className="group relative z-[999] mt-7 inline-flex items-center gap-3 rounded-full border border-white/80 bg-white/80 p-2 pl-5 text-xs font-black uppercase tracking-[0.22em] text-zinc-700 opacity-100 shadow-[0_18px_60px_rgba(24,24,27,0.12)] backdrop-blur-2xl transition hover:-translate-y-1 hover:border-zinc-950 hover:bg-white"
           >
             <span>Download CV</span>
             <span className="hidden rounded-full border border-zinc-200 bg-[#f7f6ef] px-3 py-2 text-[10px] text-zinc-400 sm:inline-flex">
