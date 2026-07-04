@@ -51,13 +51,20 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+      const result = (await response.json()) as {
+        autoReplySent?: boolean;
+      };
+
       if (!response.ok) {
         throw new Error("Unable to send message");
       }
 
       setStatus({
         type: "success",
-        message: "Message sent. I will get back to you soon.",
+        message:
+          result.autoReplySent === false
+            ? "Message sent, but the visitor confirmation email could not be delivered."
+            : "Message sent. I will get back to you soon.",
       });
       setFormData({
         name: "",
