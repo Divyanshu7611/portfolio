@@ -15,18 +15,32 @@ import { ImGithub } from "react-icons/im";
 const name = "Divyanshu Sharma";
 
 const technologies = [
+  "Nest.js",
   "Next.js",
-  "React",
-  "TypeScript",
-  "Node.js",
-  "Express",
+  "React.js",
+  "PostgreSQL",
   "MongoDB",
-  "Tailwind CSS",
+  "Node.js",
+  "Express.js",
+  "Cloudinary",
+  "FireBase",
+  "Socket.io",
+  "AWS",
+  "Razorpay",
+  "Nginx",
+  "TypeScript",
+  "Data Pipelines",
+  "Github Webhooks",
+  "Docker",
+  "Ollama",
+  "Shopify",
+  "GraphQL",
+  "Algolia",
+  "Nginx",
+  "Oxygen",
   "GSAP",
-  "Framer Motion",
-  "Firebase",
-  "REST APIs",
-  "UI / UX",
+  "React Tanstack Query",
+  "C++"
 ];
 
 const firstName = "DIVYANSHU";

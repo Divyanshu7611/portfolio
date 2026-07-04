@@ -21,7 +21,16 @@ const projects = [
     githubUrl: "https://github.com/Divyanshu7611/vrental",
     description:
       "Apartment rental platform where owners can list properties and users can discover nearby rentals, send interest requests, and interact through secure flows.",
-    stack: ["Next.js", "TypeScript", "MongoDB", "Node.js", "Cloudinary"],
+    stack: ["Next.js", "TypeScript", "MongoDB", "Node.js", "Cloudinary", "FireBase", "Socket.io", "AWS", "Razorpay", "Nginx"],
+  },
+  {
+    title: "AI PR Reviewer",
+    category: "AI",
+    liveUrl: "",
+    githubUrl: "https://github.com/Divyanshu7611/ai-pr-reviewer",
+    description:
+      "It's Automatic PR Reviewer that reviews the PR and gives the feedback on the PR. Give Overall Code Quality, Security, Performance, and Best Practices.",
+    stack: ["Nest.js", "PostgreSQL", "Ollama","Github Webhooks", "Docker","Next.js"],
   },
   {
     title: "HeyZizz",
@@ -30,7 +39,7 @@ const projects = [
     githubUrl: "https://github.com/Divyanshu7611/zizz-gummy",
     description:
       "Production e-commerce storefront for gummies with product discovery, cart flows, checkout experience, and a polished responsive shopping interface.",
-    stack: ["Next.js", "TypeScript", "Shopify", "GraphQL", "Algolia", "Nginx"],
+    stack: ["Hydrogen Reacy.js", "TypeScript", "Shopify", "GraphQL", "Algolia", "Nginx", "Oxygen"],
   },
   {
     title: "THAR '24",
@@ -39,7 +48,7 @@ const projects = [
     githubUrl: "https://github.com/Divyanshu7611/Thar24",
     description:
       "Official college tech fest website with immersive themed UI, event discovery, registrations, and a high-energy experience for participants.",
-    stack: ["Next.js", "Tailwind CSS", "Animations", "Event Platform"],
+    stack: ["Next.js", "Tailwind CSS", "GSAP", "MongoDB", "Node.js"],
   },
   {
     title: "YoungMK NGO",
@@ -48,28 +57,37 @@ const projects = [
     githubUrl: "https://github.com/Divyanshu7611/youngmk_ngo",
     description:
       "NGO website focused on communicating impact, programs, and community initiatives through a clean, accessible, and responsive web presence.",
-    stack: ["Next.js", "React", "Tailwind CSS", "Responsive UI"],
-  },
-  {
-    title: "Personal Portfolio",
-    category: "Portfolio",
-    liveUrl: "https://portfolio-divyanshus-projects-7c3eb08c.vercel.app/",
-    githubUrl: "",
-    description:
-      "Personal portfolio showcasing full-stack experience, selected projects, interactive visuals, and a refined presentation of engineering work.",
-    stack: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-  },
+    stack: ["Next.js", "Tailwind CSS", "Responsive UI"],
+  }
 ];
 
 const runningLine = [
-  "Products",
-  "APIs",
-  "UI Systems",
-  "Databases",
-  "Payments",
-  "Deployments",
-  "Auth",
-  "Performance",
+  "Nest.js",
+  "Next.js",
+  "React.js",
+  "PostgreSQL",
+  "MongoDB",
+  "Node.js",
+  "Express.js",
+  "Cloudinary",
+  "FireBase",
+  "Socket.io",
+  "AWS",
+  "Razorpay",
+  "Nginx",
+  "TypeScript",
+  "Data Pipelines",
+  "Github Webhooks",
+  "Docker",
+  "Ollama",
+  "Shopify",
+  "GraphQL",
+  "Algolia",
+  "Nginx",
+  "Oxygen",
+  "GSAP",
+  "React Tanstack Query",
+  "C++"
 ];
 
 type Project = (typeof projects)[number];
