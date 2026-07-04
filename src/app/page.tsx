@@ -1,46 +1,43 @@
-// import Navbar from '@/components/Navbar'
-// import Hero from '@/components/Hero'
-// import FloatingNavbar from '@/components/FloatDock'
-// import AboutMe from '@/components/About'
-
-// export default function Home() {
-//   return (
-//     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-//       <Navbar />
-//       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-//         <Hero />
-//         <AboutMe/>
-//       </main>
-//     </div>
-//   )
-// }
-
-
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FloatingNavbar from "@/components/FloatDock";
 import AboutMe from "@/components/About";
+import CodeShowcase from "@/components/CodeShowcase";
 import Projects from "@/components/Projects";
-import SkillsSection from "@/components/Skills";
-import Contact from "@/components/Contact"; 
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
 
+  const handleSectionChange = (section: string) => {
+    setActiveSection(section);
+    document.getElementById(section)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <Navbar />
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        {activeSection === "hero" && <Hero />}
-        {activeSection === "about" && <AboutMe />}
-        {activeSection === "projects" && <Projects />}
-        {activeSection === "skills" && <SkillsSection />}
-        {activeSection === "contact" && <Contact />}
+    <div className="min-h-screen bg-[#f7f6ef] font-[family-name:var(--font-geist-sans)]">
+      <main className="flex min-h-screen flex-col items-center">
+        <section id="hero" className="w-full">
+          <Hero />
+        </section>
+        <section id="about" className="w-full">
+          <AboutMe />
+        </section>
+        <section className="w-full">
+          <CodeShowcase />
+        </section>
+        <section id="projects" className="w-full">
+          <Projects />
+        </section>
       </main>
-      <FloatingNavbar setActiveSection={setActiveSection} />
+      <FloatingNavbar
+        activeSection={activeSection}
+        setActiveSection={handleSectionChange}
+      />
     </div>
   );
 }
